@@ -6,9 +6,27 @@ from graia.ariadne.model import Group
 
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
-
+import random
 channel = Channel.current()
 
+
+
+@channel.use(
+
+    ListenerSchema(
+        listening_events=[GroupMessage],
+        decorators=[MatchContent("Bot-version")]
+    )
+)
+async def bot_version(app: Ariadne, group: Group):
+
+         await app.send_message(
+        group,
+        MessageChain(f"当前装载版本:1.05b\n"
+                    
+
+                                   )
+    )
 
 @channel.use(
     ListenerSchema(
@@ -29,17 +47,6 @@ async def brief_introduction(app: Ariadne, group: Group):
     )
 
 
-@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage],
-        decorators=[MatchContent("Bot-version")]
-    )
-)
-async def bot_version(app: Ariadne, group: Group):
-    await app.send_message(
-        group,
-        MessageChain(f"当前装载版本:1.05b")
-    )
 
 
 @channel.use(
@@ -99,9 +106,9 @@ async def love(app: Ariadne, group: Group):
                      f"Hantools:\n"
                      f"Github主页:https://github.com/daizihan233\n"
                      f"Windows2000:\n"
-                     f"Github主页:https//:github.com/Abjust"
+                     f"Github主页:https://github.com/Abjust\n"
                      f"我（ObsidianCatalina）:"
-                     f"Github主页:https//github.com/ObsidianCatalina"
+                     f"Github主页:https://github.com/ObsidianCatalina"
                      ),
     )
     
