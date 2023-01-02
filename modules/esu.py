@@ -1,6 +1,6 @@
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
-from graia.ariadne.message.chain import MessageChain,At,Plain
+from graia.ariadne.message.chain import MessageChain, At, Plain
 from graia.ariadne.message.parser.base import MatchContent
 from graia.ariadne.model import Group
 
@@ -17,14 +17,14 @@ channel = Channel.current()
         decorators=[MatchContent("突发恶疾")]
     )
 )
-async def linux(app: Ariadne, group: Group,event:GroupMessage):
+async def esu(app: Ariadne, group: Group, event: GroupMessage):
     knowledge = [
-        MessageChain(MessageChain([At(event.sender.id), Plain(" 爱你呦~❤")])),
-        MessageChain(MessageChain([At(event.sender.id), Plain(" 亲爱的快超死我呜呜呜~❤")])),
-        MessageChain(MessageChain([At(event.sender.id), Plain(" Hantools我爱死你啦!!!❤")])),
-        MessageChain(MessageChain([At(event.sender.id), Plain(" aaaaaaaaaaaaaaaaaaa~❤")])),
+        " 爱你呦~❤",
+        " 亲爱的快超死我呜呜呜~❤",
+        " Hantools我爱死你啦!!!❤",
+        " aaaaaaaaaaaaaaaaaaa~❤",
     ]
     await app.send_message(
         group,
-        MessageChain(random.choice(knowledge))
+        MessageChain(At(event.sender.id), Plain(random.choice(knowledge)))
     )

@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d84715c-65c4-4af3-bae7-237266351bbf" name="变更" comment="过于答辩">
-      <change beforePath="$PROJECT_DIR$/modules/getup.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/esu.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/esu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/fudu.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/fudu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/linux.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/overview.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/overview.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +78,7 @@
       <workItem from="1672559485972" duration="2756000" />
       <workItem from="1672562388807" duration="2954000" />
       <workItem from="1672634824073" duration="766000" />
+      <workItem from="1672653770666" duration="1810000" />
     </task>
     <task id="LOCAL-00001" summary="你的代码可以答辩，但不能比我还答辩">
       <created>1672560751110</created>

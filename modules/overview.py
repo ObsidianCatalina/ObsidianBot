@@ -6,9 +6,8 @@ from graia.ariadne.model import Group
 
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
-import random
-channel = Channel.current()
 
+channel = Channel.current()
 
 
 @channel.use(
@@ -19,14 +18,13 @@ channel = Channel.current()
     )
 )
 async def bot_version(app: Ariadne, group: Group):
-
-         await app.send_message(
+    await app.send_message(
         group,
         MessageChain(f"当前装载版本:1.05b\n"
-                    
 
-                                   )
+                     )
     )
+
 
 @channel.use(
     ListenerSchema(
@@ -47,8 +45,6 @@ async def brief_introduction(app: Ariadne, group: Group):
     )
 
 
-
-
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -58,7 +54,8 @@ async def brief_introduction(app: Ariadne, group: Group):
 async def menu(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(f"菜单（开发中）\n1，爱你：会回复“我也爱你”\n2，简介：作者&这个机器人的简介\n3，linux知识：随机发送一条有关Unix/Linux系统的知识\n4，更新日志：无描述")
+        MessageChain(
+            f"菜单（开发中）\n1，爱你：会回复“我也爱你”\n2，简介：作者&这个机器人的简介\n3，linux知识：随机发送一条有关Unix/Linux系统的知识\n4，更新日志：无描述")
     )
 
 
@@ -73,6 +70,8 @@ async def love(app: Ariadne, group: Group):
         group,
         MessageChain(f"我也爱你"),
     )
+
+
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -93,6 +92,8 @@ async def love(app: Ariadne, group: Group):
                      f"紧急修复机器人会复读其他机器人的bug\n"
                      f"移除了Him"),
     )
+
+
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -111,5 +112,3 @@ async def love(app: Ariadne, group: Group):
                      f"Github主页:https://github.com/ObsidianCatalina"
                      ),
     )
-    
-

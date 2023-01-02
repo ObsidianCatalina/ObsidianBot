@@ -13,19 +13,10 @@ channel = Channel.current()
         listening_events=[GroupMessage]
     )
 )
-async def fudu(app: Ariadne, group: Group, message: MessageChain,event: GroupMessage):
- if not event.sender.id in [
-2810482259,
-2265453790,
-3594648576,
-748029973,
-3131016892,
-3573523379,
-1707416843,
-]: 
-    if message.display in [
-        "6", "9", "c", "tcl", "666", "ccc","？","?","sb"    ]:
-        await app.send_message(
-            group,
-            MessageChain(message.display),
-        )
+async def fudu(app: Ariadne, group: Group, message: MessageChain, event: GroupMessage):
+    if event.sender.id not in [2810482259, 2265453790, 3594648576, 748029973, 3131016892, 3573523379, 1707416843]:
+        if message.display in ["6", "9", "c", "tcl", "666", "ccc", "？", "?", "sb"]:
+            await app.send_message(
+                group,
+                MessageChain(message.display),
+            )
