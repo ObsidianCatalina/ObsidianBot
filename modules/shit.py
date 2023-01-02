@@ -1,6 +1,6 @@
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
-from graia.ariadne.message.chain import MessageChain
+from graia.ariadne.message.chain import MessageChain,Image
 from graia.ariadne.message.parser.base import MatchContent
 from graia.ariadne.model import Group
 
@@ -21,3 +21,5 @@ async def shit(app: Ariadne, group: Group):
         group,
         MessageChain(f"我杏并犯了，拉我去炼人炉！")
     )
+
+

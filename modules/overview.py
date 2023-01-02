@@ -108,7 +108,7 @@ async def love(app: Ariadne, group: Group):
                      f"Github主页:https://github.com/daizihan233\n"
                      f"Windows2000:\n"
                      f"Github主页:https://github.com/Abjust\n"
-                     f"我（ObsidianCatalina）:"
+                     f"我（ObsidianCatalina）:\n"
                      f"Github主页:https://github.com/ObsidianCatalina"
                      ),
     )
