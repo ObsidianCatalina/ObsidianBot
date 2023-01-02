@@ -10,7 +10,10 @@ channel = Channel.current()
 
 @channel.use(ListenerSchema(listening_events=[NudgeEvent]))
 async def getup(app: Ariadne, event: NudgeEvent):
-    if event.context_type == "group":
+    if event.supplicant== [
+2946761346
+]:
+     if event.context_type == "group":
         await app.send_group_message(
             event.group_id,
             MessageChain(MessageChain([At(event.supplicant), Plain(" 再戳老娘就把你手指头掰断！！！！！！！！")]))

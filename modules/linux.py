@@ -18,7 +18,7 @@ channel = Channel.current()
     )
 )
 async def linux(app: Ariadne, group: Group):
-    r = random.randint(1, 5)
+    r = random.randint(1, 6)
     match r:
         case 1:
             await app.send_message(
@@ -46,4 +46,10 @@ async def linux(app: Ariadne, group: Group):
                 group,
                 MessageChain(
                     f"不同的系统拥有不同的包管理，如deb系统的包管理为apt，dpkg RHEL系统为yum，dnf（openSUSE为zypper），Arch系统主要为pacman等")
+            )
+        case 6:
+            await app.send_message(
+                group,
+                MessageChain(
+                    f"mkdir主要用于创建文件夹/目录，主要用法是mkdir <folder name>")
             )
