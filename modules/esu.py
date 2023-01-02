@@ -18,7 +18,7 @@ channel = Channel.current()
     )
 )
 async def linux(app: Ariadne, group: Group,event:GroupMessage):
-    knowledge = [
+    esu = [
         MessageChain(MessageChain([At(event.sender.id), Plain(" 爱你呦~❤")])),
         MessageChain(MessageChain([At(event.sender.id), Plain(" 亲爱的快超死我呜呜呜~❤")])),
         MessageChain(MessageChain([At(event.sender.id), Plain(" Hantools我爱死你啦!!!❤")])),
@@ -26,5 +26,5 @@ async def linux(app: Ariadne, group: Group,event:GroupMessage):
     ]
     await app.send_message(
         group,
-        MessageChain(random.choice(knowledge))
+        MessageChain(random.choice(esu))
     )

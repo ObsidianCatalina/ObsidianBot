@@ -58,7 +58,7 @@ async def brief_introduction(app: Ariadne, group: Group):
 async def menu(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(f"菜单（开发中）\n1，爱你：会回复“我也爱你”\n2，简介：作者&这个机器人的简介\n3，linux知识：随机发送一条有关Unix/Linux系统的知识\n4，更新日志：无描述")
+        MessageChain(f"菜单（开发中）\n1，爱你：会回复“我也爱你”\n2，简介：作者&这个机器人的简介\n3，linux芝士：随机发送一条有关Unix/Linux系统的知识\n4，更新日志：无描述")
     )
 
 
@@ -107,7 +107,7 @@ async def love(app: Ariadne, group: Group):
                      f"Github主页:https://github.com/daizihan233\n"
                      f"Windows2000:\n"
                      f"Github主页:https://github.com/Abjust\n"
-                     f"我（ObsidianCatalina）:"
+                     f"我（ObsidianCatalina）:\n"
                      f"Github主页:https://github.com/ObsidianCatalina"
                      ),
     )
