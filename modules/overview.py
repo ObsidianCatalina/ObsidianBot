@@ -38,7 +38,7 @@ async def brief_introduction(app: Ariadne, group: Group):
 async def bot_version(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(f"当前装载版本:1.04b")
+        MessageChain(f"当前装载版本:1.05b")
     )
 
 
@@ -51,7 +51,7 @@ async def bot_version(app: Ariadne, group: Group):
 async def menu(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(f"菜单（开发中）\n1，爱你:会回复“我也爱你”\n2，简介:作者&这个机器人的简介")
+        MessageChain(f"菜单（开发中）\n1，爱你：会回复“我也爱你”\n2，简介：作者&这个机器人的简介\n3，linux知识：随机发送一条有关Unix/Linux系统的知识\n4，更新日志：无描述")
     )
 
 
@@ -66,3 +66,43 @@ async def love(app: Ariadne, group: Group):
         group,
         MessageChain(f"我也爱你"),
     )
+@channel.use(
+    ListenerSchema(
+        listening_events=[GroupMessage],
+        decorators=[MatchContent("更新日志")]
+    )
+)
+async def love(app: Ariadne, group: Group):
+    await app.send_message(
+        group,
+        MessageChain(f"1.04b更新日志:\n"
+                     f"更新时间:2023/1/1\n"
+                     f"更新内容:\n"
+                     f"更新了“linux知识”命令\n"
+                     f"移除了Him\n"
+                     f"1.05b更新日志:\n"
+                     f"更新时间:2023/1/1\n"
+                     f"更新内容:\n"
+                     f"紧急修复机器人会复读其他机器人的bug\n"
+                     f"移除了Him"),
+    )
+@channel.use(
+    ListenerSchema(
+        listening_events=[GroupMessage],
+        decorators=[MatchContent("特别鸣谢")]
+    )
+)
+async def love(app: Ariadne, group: Group):
+    await app.send_message(
+        group,
+        MessageChain(f"感谢他们为制作机器人提供的帮助\n"
+                     f"Hantools:\n"
+                     f"Github主页:https://github.com/daizihan233\n"
+                     f"Windows2000:\n"
+                     f"Github主页:https//:github.com/Abjust"
+                     f"我（ObsidianCatalina）:"
+                     f"Github主页:https//github.com/ObsidianCatalina"
+                     ),
+    )
+    
+
