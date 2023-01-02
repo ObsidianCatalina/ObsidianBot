@@ -10,7 +10,9 @@ import random
 
 channel = Channel.current()
 
-
+f = [
+        " Hantools我爱死你啦!!!❤",  
+    ]
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -21,10 +23,17 @@ async def esu(app: Ariadne, group: Group, event: GroupMessage):
     knowledge = [
         " 爱你呦~❤",
         " 亲爱的快超死我呜呜呜~❤",
-        " Hantools我爱死你啦!!!❤",
         " aaaaaaaaaaaaaaaaaaa~❤",
+        " 最喜欢你了❤~"
     ]
     await app.send_message(
         group,
         MessageChain(At(event.sender.id), Plain(random.choice(knowledge)))
     )
+async def esu(app: Ariadne, group: Group, event: GroupMessage):
+ if event.sender.id == 183713750:
+    await app.send_message(
+        group,
+         MessageChain(At(event.sender.id), Plain(random.choice(f)))
+    )
+

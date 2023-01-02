@@ -13,25 +13,13 @@ channel = Channel.current()
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
-        decorators=[MatchContent("杏并")]
+        decorators=[MatchContent("获取源代码")]
     )
 )
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(f"我杏并犯了，拉我去炼人炉！")
+        MessageChain(f"你可以在https://github.com/ObsidianCatalina/ObsidianBot中手动下载\n也可以使用git clone https://github.com/ObsidianCatalina/ObsidianBot.git获取源码")
     )
 
 
-
-@channel.use(
-    ListenerSchema(
-        listening_events=[GroupMessage],
-        decorators=[MatchContent("昊京")]
-    )
-)
-async def shit(app: Ariadne, group: Group):
-    await app.send_message(
-        group,
-        MessageChain(f"和蔼！任何邪恶，终将绳之以法！")
-    )

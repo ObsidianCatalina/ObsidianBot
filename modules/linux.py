@@ -21,6 +21,7 @@ knowledge = [
     "不同的系统拥有不同的包管理，如deb系统的包管理为apt，dpkg RHEL系统为yum，dnf（openSUSE为zypper），Arch系统主要为pacman等",
     "mkdir命令主要用于创建文件夹/目录，用法为mkdir <folder name>",
     "tar命令的参数有很多，如-c,-x,-t,-z,-j,-v,-f,-p,-P,-N,-exclude FILE等",
+
 ]
 
 
