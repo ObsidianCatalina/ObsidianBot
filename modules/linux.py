@@ -14,8 +14,6 @@ channel = Channel.current()
 #读取json
 r = json.load(open("./jsons/su.json", "r", encoding='utf-8'))
 knowledge = json.load(open("./jsons/linux_knowledge.json","r",encoding='utf-8'))
-
-
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
