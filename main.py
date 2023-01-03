@@ -1,5 +1,4 @@
 import pkgutil
-
 from creart import create
 from graia.ariadne.app import Ariadne
 from graia.ariadne.connection.config import config

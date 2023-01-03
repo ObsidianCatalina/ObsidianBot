@@ -1,23 +1,27 @@
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
-from graia.ariadne.message.chain import MessageChain,Image
+from graia.ariadne.message.chain import MessageChain
 from graia.ariadne.message.parser.base import MatchContent
 from graia.ariadne.model import Group
-import random
+from graia.ariadne.message.element import Plain
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
+import random
 import json
 channel = Channel.current()
-shit = json.load(open("./jsons/shit.json","r",encoding='utf-8')) 
+r = json.load(open("./jsons/rand_sentence.json", "r", encoding='utf-8'))
+#版本号随机句子的参数
+txt="当前装载版本:1.1.0\n"
 @channel.use(
+
     ListenerSchema(
         listening_events=[GroupMessage],
-        decorators=[MatchContent("答辩")]
+        decorators=[MatchContent("Bot-version")]
     )
 )
-async def linux(app: Ariadne, group: Group):
-
+async def bot_version(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(random.choice(shit['shit']))
+        MessageChain(txt,"------------\n",Plain(random.choice((r['r'])))
+                     )
     )
