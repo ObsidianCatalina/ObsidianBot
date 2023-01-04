@@ -11,7 +11,7 @@ import random
 import json
 
 channel = Channel.current()
-#读取json
+# 读取json
 r = json.load(open("./jsons/su.json", "r", encoding='utf-8'))
 knowledge = json.load(open("./jsons/linux_knowledge.json","r",encoding='utf-8'))
 @channel.use(
@@ -21,7 +21,6 @@ knowledge = json.load(open("./jsons/linux_knowledge.json","r",encoding='utf-8'))
     )
 )
 async def linux(app: Ariadne, group: Group):
-
     await app.send_message(
         group,
         MessageChain(random.choice((knowledge['r'])))
@@ -34,8 +33,8 @@ async def linux(app: Ariadne, group: Group):
         decorators=[MatchContent("linux芝士 -l")]
     )
 )
-async def linux(app: Ariadne, group: Group, event: GroupMessage):
-    #使用json
+async def linux_list(app: Ariadne, group: Group, event: GroupMessage):
+    # 使用json
     if event.sender.id == r[0]['su']:
         await app.send_message(
             group,
@@ -44,7 +43,7 @@ async def linux(app: Ariadne, group: Group, event: GroupMessage):
                     Plain(
                         "\n".join(
                             [
-                                f"{x+1}、{knowledge['r'][x]}" for x in range(len(knowledge['r']))
+                                f"{x + 1}、{knowledge['r'][x]}" for x in range(len(knowledge['r']))
                             ]
                         )
                     )

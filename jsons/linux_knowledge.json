@@ -1,5 +1,5 @@
 {"r": [
-    "usr不等于user哦，而是'Unix Software Resource'的缩写",
+    "usr不等于user哦，而是\"Unix Software Resource\"的缩写",
     "/etc目录存放的主要是配置文件，如用户信息、服务的启动脚本、常用服务的配置文件等",
     "/bin目录存放的主要是系统命令，如sudo，普通用户和root用户都可以执行",
     "rm是一个神奇的命令，用于删除文件，文件夹，目录，甚至是/,-rf参数表示的是强制执行，如果想删除一个或者大多个文件（文件夹），可以使用:sudo rm -rf file1 file2 file3或者sudo rm -rf folder1 folder2 folder3等",

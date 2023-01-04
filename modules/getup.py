@@ -10,7 +10,7 @@ channel = Channel.current()
 
 @channel.use(ListenerSchema(listening_events=[NudgeEvent]))
 async def getup(app: Ariadne, event: NudgeEvent):
-    #只检测被戳的是不是机器人
+    # 只检测被戳的是不是机器人
     if event.target == 2946761346:
         if event.context_type == "group":
             await app.send_group_message(
