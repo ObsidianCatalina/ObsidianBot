@@ -5,6 +5,8 @@ from graia.ariadne.connection.config import config
 from graia.broadcast import Broadcast
 from graia.saya import Saya
 
+# 你这代码解释器都看不懂罢？  —— HanTools
+
 saya = create(Saya)
 bcc = create(Broadcast)
 app = Ariadne(

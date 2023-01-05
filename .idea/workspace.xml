@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d84715c-65c4-4af3-bae7-237266351bbf" name="变更" comment="优化了Him">
+    <list default="true" id="9d84715c-65c4-4af3-bae7-237266351bbf" name="变更" comment="咱就说…… 解释器还能读得懂你的代码吗？">
       <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsons/linux_knowledge.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsons/linux_knowledge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BotCoreManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotCoreManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsons/version.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsons/version.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/bot-version.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/bot-version.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/eji.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/eji.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/fudu.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/fudu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/getup.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/getup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/linux.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/overview.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/overview.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/println.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/println.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/random_photo.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/random_photo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/shit.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/shit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/sourcecode.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/sourcecode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/special_thanks.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/special_thanks.py" afterDir="false" />
@@ -55,7 +58,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JiSaM2Y01REwWgjbfHKIJFHj5E" />
   <component name="ProjectViewState">
@@ -89,7 +92,8 @@
       <workItem from="1672562388807" duration="2954000" />
       <workItem from="1672634824073" duration="766000" />
       <workItem from="1672653770666" duration="3564000" />
-      <workItem from="1672804102204" duration="2200000" />
+      <workItem from="1672804102204" duration="2528000" />
+      <workItem from="1672924043364" duration="2725000" />
     </task>
     <task id="LOCAL-00001" summary="你的代码可以答辩，但不能比我还答辩">
       <created>1672560751110</created>
@@ -126,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672656589048</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="谁教你这么写答辩的？（">
+      <created>1672806949404</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672806949404</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +160,8 @@
     <MESSAGE value="过于答辩" />
     <MESSAGE value="添加了Him" />
     <MESSAGE value="优化了Him" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化了Him" />
+    <MESSAGE value="谁教你这么写答辩的？（" />
+    <MESSAGE value="咱就说…… 解释器还能读得懂你的代码吗？" />
+    <option name="LAST_COMMIT_MESSAGE" value="咱就说…… 解释器还能读得懂你的代码吗？" />
   </component>
 </project>

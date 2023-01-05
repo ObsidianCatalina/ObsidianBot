@@ -1,16 +1,20 @@
+import random
+
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
 from graia.ariadne.message.chain import MessageChain
-from graia.ariadne.message.element import Plain
 from graia.ariadne.message.parser.base import MatchContent
 from graia.ariadne.model import Group
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
-import random
+
 import BotCoreManager
+
 channel = Channel.current()
 # 读取json
 shit = BotCoreManager.shit('r')
+
+
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -20,5 +24,5 @@ shit = BotCoreManager.shit('r')
 async def linux(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(random.choice((shit)))
+        MessageChain(random.choice(shit))
     )
