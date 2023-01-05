@@ -1,4 +1,4 @@
-[{"linuxv":"此模块当前版本为:1.5.0 Stable",
+{"linuxv":"此模块当前版本为:1.5.0 Stable",
 "getupv":"此模块当前版本为:1.2.0 Stable",
 "menuv":"此模块当前版本为:1.4.0 Stable",
 "updatev":"此模块当前版本为:1.0.0 Stable",
@@ -6,5 +6,9 @@
 "thankslistv":"此模块当前版本为:1.0.0 Stable",
 "esuv":"此模块当前版本为:1.1.0 Stable",
 "fuduv":"此模块当前版本为:2.0.0 Stable",
-"shit.py":"此模块当前版本为:答辩2.0 Stable"
-}]
+"shit.py":"此模块当前版本为:答辩2.0 Stable",
+"setuv":"此模块当前版本为:1.4.0 Stable",
+"mainv":"主模块当前版本为:2023_1.1.0_Q Stable",
+"versionv":"版本查询模块当前版本为:SL_V_2023_1.9.0 Stable",
+"bcmv":"核心管理模块当前版本为BCM_Q_2023_1.3.0 Stable"
+}

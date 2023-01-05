@@ -18,7 +18,7 @@ async def brief_introduction(app: Ariadne, group: Group):
     await app.send_message(
         group,
         MessageChain(
-            f"作者简介:一个沙批\n"
+            f"作者简介:ObsidianCatalina\n年龄:15\n性别:不详\n爱好:不详\n"
             f"机器人简介:\n"
             f"名字:Type-Release10.3\n"
             f"来源:出自她的沙批开发者ObsidianCatalina\n"

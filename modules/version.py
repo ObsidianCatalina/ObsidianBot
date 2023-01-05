@@ -8,12 +8,8 @@ from graia.ariadne.message.parser.base import MatchContent
 from graia.ariadne.model import Group
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
-
+import BotCoreManager
 channel = Channel.current()
-r = json.load(open("./jsons/version.json", "r", encoding='utf-8'))
-b = json.load(open("./jsons/su.json", "r", encoding='utf-8'))
-
-
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -23,7 +19,7 @@ b = json.load(open("./jsons/su.json", "r", encoding='utf-8'))
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['linuxv']))
+        MessageChain(Plain(BotCoreManager.ver('linuxv')))
     )
 
 
@@ -36,7 +32,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['getupv']))
+        MessageChain(Plain(BotCoreManager.ver('getupv')))
     )
 
 
@@ -49,7 +45,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['menuv']))
+        MessageChain(Plain(BotCoreManager.ver('menuv')))
     )
 
 
@@ -62,7 +58,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['shit.py']))
+        MessageChain(Plain(BotCoreManager.ver('shit.py')))
     )
 
 
@@ -75,7 +71,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['esuv']))
+        MessageChain(Plain(BotCoreManager.ver('esuv')))
     )
 
 
@@ -88,7 +84,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['updatev']))
+        MessageChain(Plain([BotCoreManager.ver('updatev')]))
     )
 
 
@@ -101,7 +97,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['fuduv']))
+        MessageChain(Plain(BotCoreManager.ver('fuduv')))
     )
 
 
@@ -114,7 +110,7 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['thankslistv']))
+        MessageChain(Plain(BotCoreManager.ver('thankslistv')))
     )
 
 
@@ -127,28 +123,51 @@ async def shit(app: Ariadne, group: Group):
 async def shit(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(r[0]['sourcecodev']))
+        MessageChain(Plain(BotCoreManager.ver('sourcecodev')))
     )
-
+@channel.use(
+    ListenerSchema(
+        listening_events=[GroupMessage],
+        decorators=[MatchContent("来份涩图 -v")]
+    )
+)
+async def shit(app: Ariadne, group: Group):
+    await app.send_message(
+        group,
+        MessageChain(Plain(BotCoreManager.ver(BotCoreManager.ver('setuv'))))
+    )
+@channel.use(
+    ListenerSchema(
+        listening_events=[GroupMessage],
+        decorators=[MatchContent("main -v")]
+    )
+)
+async def shit(app: Ariadne, group: Group):
+    await app.send_message(
+        group,
+        MessageChain(Plain(BotCoreManager.ver('mainv')))
+    )
+@channel.use(
+    ListenerSchema(
+        listening_events=[GroupMessage],
+        decorators=[MatchContent("version -v")]
+    )
+)
+async def shit(app: Ariadne, group: Group):
+    await app.send_message(
+        group,
+        MessageChain(Plain(BotCoreManager.ver('versionv')))
+    )
 
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
-        decorators=[MatchContent("ver -l")]
+        decorators=[MatchContent("BCM -v")]
     )
 )
 async def shit(app: Ariadne, group: Group, event: GroupMessage):
-    if event.sender.id == b[0]['su']:
+    if event.sender.id == b:
         await app.send_message(
             group,
-            MessageChain(f"linux芝士: {r[0]['linuxv']}\n",
-                         f"被戳: {r[0]['getupv']}\n",
-                         f"菜单: {r[0]['menuv']}\n",
-                         f"更新日志: {r[0]['updatev']}\n",
-                         f"获取源代码: {r[0]['sourcecodev']} \n",
-                         f"特别鸣谢: {r[0]['thankslistv']} \n",
-                         f"突发恶疾: {r[0]['esuv']} \n",
-                         f"复读: {r[0]['fuduv']} \n",
-                         f"答辩: {r[0]['shit.py']}"
-                         )
+            MessageChain(Plain(BotCoreManager.ver('bcmv')))
         )

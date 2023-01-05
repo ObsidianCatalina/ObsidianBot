@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.11"
 graia-ariadne = {extras = ["standard"], version = "^0.10.2"}
 graia-saya = "^0.0.17"
+aiohttp = "^3.8.3"
+pyyaml = "^6.0"
+requests-cache = "^0.9.7"
 
 
 [build-system]

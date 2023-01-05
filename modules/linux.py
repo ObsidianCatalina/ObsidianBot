@@ -9,11 +9,12 @@ from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
 import random
 import json
-
+import BotCoreManager
 channel = Channel.current()
 # 读取json
-r = json.load(open("./jsons/su.json", "r", encoding='utf-8'))
-knowledge = json.load(open("./jsons/linux_knowledge.json","r",encoding='utf-8'))
+su = BotCoreManager.su('su')
+knowledge = BotCoreManager.linux_knowledge('r')
+
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -23,27 +24,28 @@ knowledge = json.load(open("./jsons/linux_knowledge.json","r",encoding='utf-8'))
 async def linux(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(random.choice((knowledge['r'])))
+        MessageChain(random.choice((knowledge)))
     )
 
 
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
+        
         decorators=[MatchContent("linux芝士 -l")]
     )
 )
 async def linux_list(app: Ariadne, group: Group, event: GroupMessage):
     # 使用json
-    if event.sender.id == r[0]['su']:
-        await app.send_message(
+    if event.sender.id == su:
+            await app.send_message(
             group,
             MessageChain(
                 [
                     Plain(
                         "\n".join(
                             [
-                                f"{x + 1}、{knowledge['r'][x]}" for x in range(len(knowledge['r']))
+                                f"{x + 1}、{knowledge[x]}" for x in range(len(knowledge))
                             ]
                         )
                     )

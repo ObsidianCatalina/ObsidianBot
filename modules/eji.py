@@ -7,12 +7,8 @@ import json
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
 import random
-
+import BotCoreManager
 channel = Channel.current()
-
-s = json.load(open("./jsons/eji.json", "r", encoding='utf-8'))
-
-
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -24,10 +20,10 @@ async def esu(app: Ariadne, group: Group, event: GroupMessage):
     if event.sender.id == 183713750:
         await app.send_message(
             group,
-            MessageChain(At(event.sender.id), Plain(random.choice((s['j']))))
+            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('j'))))
         )
     else:
         await app.send_message(
             group,
-            MessageChain(At(event.sender.id), Plain(random.choice(s['b'])))
+            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('b'))))
         )

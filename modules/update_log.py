@@ -8,9 +8,9 @@ from graia.ariadne.message.parser.base import MatchContent
 from graia.ariadne.model import Group
 from graia.saya import Channel
 from graia.saya.builtins.broadcast.schema import ListenerSchema
-
+import BotCoreManager
 channel = Channel.current()
-r = json.load(open("./jsons/update_log.json", "r", encoding='utf-8'))
+r = BotCoreManager.update_log('update_log')
 
 
 @channel.use(
@@ -22,6 +22,6 @@ r = json.load(open("./jsons/update_log.json", "r", encoding='utf-8'))
 async def love(app: Ariadne, group: Group):
     await app.send_message(
         group,
-        MessageChain(Plain(''.join(r['update_log'])
+        MessageChain(Plain(''.join(r)
                            )),
     )
