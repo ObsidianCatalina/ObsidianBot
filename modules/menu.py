@@ -26,5 +26,6 @@ async def menu(app: Ariadne, group: Group):
             f"4，特别鸣谢：无描述\n"
             f"5，获取源代码：了解如何获取ObsidianBot的源码\n"
             f"6，答辩：随机一条答辩出来\n"
-            f"7，来份涩图：随机发一张涩图/二次元图")
+            f"7，来份涩图：随机发一张涩图/二次元图\n"
+            f"8，println：用法：println <文字>，查看版本请输入:'println_moudle -v'")
     )

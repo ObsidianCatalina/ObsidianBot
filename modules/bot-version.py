@@ -14,7 +14,7 @@ import BotCoreManager
 channel = Channel.current()
 r = BotCoreManager.rand_sentence('r')
 # 版本号随机句子的参数
-txt = "当前装载版本:1.2.1\n"
+txt = "当前装载版本:1.3.2\n"
 
 
 @channel.use(

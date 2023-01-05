@@ -15,25 +15,23 @@ ban_user = BotCoreManager.settings('ban_println_user')
 disable = 1
 
 
+
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
         decorators=[MatchContent("enable_println -g")]
-
     )
 )
 async def println(app: Ariadne, group: Group, event: GroupMessage):
-    global disable
-    if event.sender.id in [su]:
-        disable = 0
-    await app.send_message(
-        group,
-
-        MessageChain(f"已全局启用println模块"),
-
-    )
-
-
+    
+    if event.sender.id  == su:
+        global disable
+        disable=0
+        await app.send_message(group,MessageChain(At(event.sender.id)," 已全局启用println模块"),
+    
+    )    
+    else:
+         await app.send_message(group,MessageChain(At(event.sender.id)," 抱歉亲爱的，你的权限不足")),                                            
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -41,33 +39,31 @@ async def println(app: Ariadne, group: Group, event: GroupMessage):
     )
 )
 async def println(app: Ariadne, group: Group, event: GroupMessage):
-    global disable
-    if event.sender.id in [su]:
-        disable = 1,
-    await app.send_message(
-        group,
-        MessageChain(f"已全局禁用println模块"),
-
+    
+    if event.sender.id  == su:
+        global disable
+        disable=1
+        await app.send_message(group,MessageChain(At(event.sender.id)," 已全局禁用println模块"),
+    
     )
-
-
+    else:
+         await app.send_message(group,MessageChain(At(event.sender.id)," 抱歉亲爱的，你的权限不足")),
 @channel.use(ListenerSchema(listening_events=[GroupMessage]))
-async def println(app: Ariadne, group: Group, event: GroupMessage, message: MessageChain = DetectSuffix("printIn ")):
+async def println(app: Ariadne, group: Group, event: GroupMessage, message: MessageChain):
     global disable
     if disable == 1:
+        
+     if message.display.startswith("println "):
         await app.send_message(
             group,
-            MessageChain(f"非常抱歉，此模块当前已被禁用"),
+           MessageChain(f"非常抱歉，此模块当前已被禁用")
         )
-    elif group.id in ban_group:
+@channel.use(ListenerSchema(listening_events=[GroupMessage]))
+async def println(app: Ariadne, group: Group, event: GroupMessage, message: MessageChain):
+    global disable
+    if disable == 0:
+     if message.display.startswith("println "):
         await app.send_message(
             group,
-            MessageChain(At(event.sender.id), " 非常抱歉，应开发者要求，本群已禁止此功能"))
-    elif event.sender.id in ban_user:
-        await app.send_message(group,
-                               MessageChain(At(event.sender.id), " 对不起，应开发者要求，您已被禁止使用此功能"))
-    else:
-        await app.send_message(
-            group,
-            message,
+            MessageChain(f"{message.display[8:]}"),
         )

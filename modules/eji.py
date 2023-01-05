@@ -11,7 +11,7 @@ from graia.saya.builtins.broadcast.schema import ListenerSchema
 import BotCoreManager
 
 channel = Channel.current()
-
+su=BotCoreManager.su('su')
 
 @channel.use(
     ListenerSchema(
@@ -25,6 +25,11 @@ async def esu(app: Ariadne, group: Group, event: GroupMessage):
         await app.send_message(
             group,
             MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('j'))))
+        )
+    elif event.sender.id == su:
+          await app.send_message(
+            group,
+            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('s'))))
         )
     else:
         await app.send_message(
