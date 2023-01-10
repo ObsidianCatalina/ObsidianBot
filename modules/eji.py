@@ -11,7 +11,7 @@ from graia.saya.builtins.broadcast.schema import ListenerSchema
 import BotCoreManager
 
 channel = Channel.current()
-su=BotCoreManager.su('su')
+a=BotCoreManager.bot_global('bot_admin_id')
 
 @channel.use(
     ListenerSchema(
@@ -21,18 +21,13 @@ su=BotCoreManager.su('su')
 )
 # 一个Hantols特供的恶疾（）
 async def esu(app: Ariadne, group: Group, event: GroupMessage):
-    if event.sender.id == 183713750:
-        await app.send_message(
-            group,
-            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('j'))))
-        )
-    elif event.sender.id == su:
+    if event.sender.id == a:
           await app.send_message(
             group,
-            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('s'))))
+            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('private'))))
         )
     else:
         await app.send_message(
             group,
-            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('b'))))
+            MessageChain(At(event.sender.id), Plain(random.choice(BotCoreManager.eji('public'))))
         )

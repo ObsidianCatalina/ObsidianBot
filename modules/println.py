@@ -9,9 +9,7 @@ from graia.ariadne.message.parser.base import MatchContent, DetectSuffix
 import BotCoreManager
 
 channel = Channel.current()
-su = BotCoreManager.su('su')
-ban_group = BotCoreManager.settings('ban_println_group')
-ban_user = BotCoreManager.settings('ban_println_user')
+su = BotCoreManager.bot_global('su_id')
 disable = 1
 
 

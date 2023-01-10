@@ -1,4 +1,4 @@
-{"r": [
+linux_knowledge : [
     "usr不等于user哦，而是\"Unix Software Resource\"的缩写",
     "/etc目录存放的主要是配置文件，如用户信息、服务的启动脚本、常用服务的配置文件等",
     "/bin目录存放的主要是系统命令，如sudo，普通用户和root用户都可以执行",
@@ -8,4 +8,3 @@
     "tar命令的参数有很多，如-c,-x,-t,-z,-j,-v,-f,-p,-P,-N,-exclude FILE等"
 
     ]
-}

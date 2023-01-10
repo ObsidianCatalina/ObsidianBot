@@ -12,7 +12,7 @@ import BotCoreManager
 
 channel = Channel.current()
 # 读取json
-shit = BotCoreManager.shit('r')
+shit = BotCoreManager.shit('shit')
 
 
 @channel.use(

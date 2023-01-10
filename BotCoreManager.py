@@ -3,20 +3,18 @@
 import json
 
 import yaml
-
 # 文本文件的读取可以在程序启动时完成，不必每次调用都打开，减少内存占用（虽然你大概感受不到）
 # 但有个缺点就是无法实现热更新（你还不至于懒到重启一次程序都不愿意罢？）
 url_config_yaml = yaml.safe_load(open('./yamls/urls.yaml', 'r', encoding='UTF-8'))
-eji_json = json.load(open('./jsons/eji.json', 'r', encoding='utf-8'))
-linux_knowledge_json = json.load(open('./jsons/linux_knowledge.json', 'r', encoding='utf-8'))
-su_json = json.load(open('./jsons/su.json', 'r', encoding='utf-8'))
-update_log_json = json.load(open('./jsons/update_log.json', 'r', encoding='utf-8'))
-rand_sentence_json = json.load(open('./jsons/rand_sentence.json', 'r', encoding='utf-8'))
-ver_json = json.load(open('./jsons/version.json', 'r', encoding='utf-8'))
-shit_json = json.load(open('./jsons/shit.json', 'r', encoding='utf-8'))
+eji_yaml = yaml.safe_load(open('./yamls/eji.yaml', 'r', encoding='utf-8'))
+linux_knowledge_yaml = yaml.safe_load(open('./yamls/linux_knowledge.yaml', 'r', encoding='utf-8'))
+update_log_yaml = yaml.safe_load(open('./yamls/update_log.yaml', 'r', encoding='utf-8'))
+rand_sentence_yaml = yaml.safe_load(open('./yamls/rand_sentence.yaml', 'r', encoding='utf-8'))
+ver_yaml = yaml.safe_load(open('./yamls/version.yaml', 'r', encoding='utf-8'))
+shit_yaml = yaml.safe_load(open('./yamls/shit.yaml', 'r', encoding='utf-8'))
 settings_yaml = yaml.safe_load(open('./yamls/settings.yaml', 'r', encoding='UTF-8'))
-
-
+global_yaml = yaml.safe_load(open('./yamls/global.yaml','r',encoding='utf-8'))
+take_menu_yaml = yaml.safe_load(open('./yamls/menu.yaml','r',encoding='utf-8'))
 def url_config(name: str):
     try:
         return url_config_yaml[name]
@@ -26,49 +24,41 @@ def url_config(name: str):
 
 def eji(name: str):
     try:
-        return eji_json[name]
+        return eji_yaml[name]
     except KeyError:
         return None
 
 
 def linux_knowledge(name: str):
     try:
-        return linux_knowledge_json[name]
+        return linux_knowledge_yaml[name]
     except KeyError:
         return None
-
-
-def su(name: str):
-    try:
-        return su_json[name]
-    except KeyError:
-        return None
-
 
 def update_log(name: str):
     try:
-        return update_log_json[name]
+        return update_log_yaml[name]
     except KeyError:
         return None
 
 
 def rand_sentence(name: str):
     try:
-        return rand_sentence_json[name]
+        return rand_sentence_yaml[name]
     except KeyError:
         return None
 
 
 def shit(name: str):
     try:
-        return shit_json[name]
+        return shit_yaml[name]
     except KeyError:
         return None
 
 
 def ver(name: str):
     try:
-        return ver_json[name]
+        return ver_yaml[name]
     except KeyError:
         return None
 
@@ -78,3 +68,14 @@ def settings(name: str):
         return settings_yaml[name]
     except KeyError:
         return None
+
+def bot_global(name: str):
+    try:
+        return global_yaml[name]
+    except KeyError:
+        return None
+def take_menu(name: str):
+    try:
+        return take_menu_yaml[name]
+    except KeyError:
+        return None    

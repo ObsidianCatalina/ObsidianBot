@@ -12,6 +12,7 @@ graia-saya = "^0.0.17"
 aiohttp = "^3.8.3"
 pyyaml = "^6.0"
 requests-cache = "^0.9.7"
+pymysql = "^1.0.2"
 
 
 [build-system]

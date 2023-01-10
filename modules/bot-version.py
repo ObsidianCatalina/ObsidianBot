@@ -12,9 +12,9 @@ from graia.saya.builtins.broadcast.schema import ListenerSchema
 import BotCoreManager
 
 channel = Channel.current()
-r = BotCoreManager.rand_sentence('r')
+r = BotCoreManager.rand_sentence('rand_sentence')
 # 版本号随机句子的参数
-txt = "当前装载版本:1.3.2\n"
+txt = "当前装载版本:1.4.2\n质量更新版本:0.9.0ab\n紧急更新补丁版本:Strict_0.4.0\n"
 
 
 @channel.use(
