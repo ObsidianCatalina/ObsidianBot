@@ -28,6 +28,6 @@ async def menu(app: Ariadne, group: Group):
             f"6.答辩：随机一条答辩出来\n"
             f"7.来份涩图：随机发一张涩图/二次元图\n"
             f"8.println：用法：println <文字>，查看版本请输入:'println_moudle -v'\n"
-            f"9.上菜：随机八种菜品（也有可能是别的东西）"
+            f"9.上菜：随机十种菜品（也有可能是别的东西）"
             )
     )

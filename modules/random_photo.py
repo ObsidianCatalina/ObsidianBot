@@ -14,7 +14,6 @@ url = BotCoreManager.url_config('setuapi')
 ban_group = BotCoreManager.settings('ban_group_id')
 ban_user = BotCoreManager.settings('ban_user_id')
 
-
 @channel.use(
     ListenerSchema(
         listening_events=[GroupMessage],
@@ -33,3 +32,4 @@ async def setu(app: Ariadne, group: Group, event: GroupMessage):
             async with session.get(url) as response:
                 data = await response.read()
         await app.send_group_message(group, MessageChain(Image(data_bytes=data)))
+

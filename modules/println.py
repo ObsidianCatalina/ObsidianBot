@@ -22,7 +22,7 @@ disable = 1
 )
 async def println(app: Ariadne, group: Group, event: GroupMessage):
     
-    if event.sender.id  == su:
+    if event.sender.id  in su:
         global disable
         disable=0
         await app.send_message(group,MessageChain(At(event.sender.id)," 已全局启用println模块"),
@@ -38,7 +38,7 @@ async def println(app: Ariadne, group: Group, event: GroupMessage):
 )
 async def println(app: Ariadne, group: Group, event: GroupMessage):
     
-    if event.sender.id  == su:
+    if event.sender.id  in su:
         global disable
         disable=1
         await app.send_message(group,MessageChain(At(event.sender.id)," 已全局禁用println模块"),
@@ -54,7 +54,7 @@ async def println(app: Ariadne, group: Group, event: GroupMessage, message: Mess
      if message.display.startswith("println "):
         await app.send_message(
             group,
-           MessageChain(f"非常抱歉，此模块当前已被禁用")
+           MessageChain(At(event.sender.id),"非常抱歉，此模块当前已被禁用")
         )
 @channel.use(ListenerSchema(listening_events=[GroupMessage]))
 async def println(app: Ariadne, group: Group, event: GroupMessage, message: MessageChain):
