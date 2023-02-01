@@ -18,13 +18,13 @@
 
 **2.选择你的IDE：**
 
-**[Visual Studio Code]([Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)) 按照不同的需求选择平台并安装好<u>Python</u>扩展**
+**[Visual Studio Code](https://code.visualstudio.com/) 按照不同的需求选择平台并安装好<u>Python</u>扩展**
 
 **[Pycharm](https://www.jetbrains.com/pycharm) 根据你的<u>经济实力</u>选择版本**
 
-**3.配置[mirai-api-http]([Mirai 的安装与配置 | GraiaX 文档](https://graiax.cn/before/install_mirai.html))**
+**3.配置[mirai-api-http](https://graiax.cn/before/install_mirai.html)**
 
-**4.安装** [Git]([Git - Downloads (git-scm.com)](https://git-scm.com/downloads))
+**4.安装 [Git](https://git-scm.com/downloads)**
 
 **5.打开cmd/powershell/LinuxTerminal输入：**
 

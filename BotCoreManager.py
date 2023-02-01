@@ -10,7 +10,7 @@ eji_yaml = yaml.safe_load(open('./yamls/eji.yaml', 'r', encoding='utf-8'))
 linux_knowledge_yaml = yaml.safe_load(open('./yamls/linux_knowledge.yaml', 'r', encoding='utf-8'))
 update_log_yaml = yaml.safe_load(open('./yamls/update_log.yaml', 'r', encoding='utf-8'))
 rand_sentence_yaml = yaml.safe_load(open('./yamls/rand_sentence.yaml', 'r', encoding='utf-8'))
-ver_yaml = yaml.safe_load(open('./yamls/version.yaml', 'r', encoding='utf-8'))
+
 shit_yaml = yaml.safe_load(open('./yamls/shit.yaml', 'r', encoding='utf-8'))
 settings_yaml = yaml.safe_load(open('./yamls/settings.yaml', 'r', encoding='UTF-8'))
 global_yaml = yaml.safe_load(open('./yamls/global.yaml','r',encoding='utf-8'))
@@ -56,11 +56,6 @@ def shit(name: str):
         return None
 
 
-def ver(name: str):
-    try:
-        return ver_yaml[name]
-    except KeyError:
-        return None
 
 
 def settings(name: str):
